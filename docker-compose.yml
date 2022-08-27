@@ -1,0 +1,17 @@
+version: "3"
+services:
+  application-server:
+    container_name: application-server
+    build:
+      context: ./application-server
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  static-web-server:
+    container_name: static-web-server
+    build:
+      context: ./static-web-server
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
