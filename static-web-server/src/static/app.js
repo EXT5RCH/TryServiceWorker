@@ -49,6 +49,8 @@ const usePushApi = () => {
     }
     const publicKey = (await response.json()).publicKey;
     console.log("公開鍵を取得しました。");
+    // 別にpublicキーをそのまま渡すのでも実行できる
+    // applicationServerKey = publicKey;
     applicationServerKey = urlB64ToUint8Array(publicKey);
     console.log("applicationServerKey を生成しました。");
 
